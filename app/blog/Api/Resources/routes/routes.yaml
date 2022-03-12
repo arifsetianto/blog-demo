@@ -1,0 +1,17 @@
+ping:
+    type: presenter
+    methods: [get]
+    path: ping
+    presenter: ping
+
+auth:
+    type: group
+    children: _auth.yaml
+
+user:
+    type: group
+    children: _user.yaml
+
+post:
+    type: group
+    children: _post.yaml

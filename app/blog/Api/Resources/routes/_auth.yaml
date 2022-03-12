@@ -1,0 +1,6 @@
+login:
+    type: message
+    path: login
+    message: authenticate
+    methods: [post]
+    rules: [authenticate]

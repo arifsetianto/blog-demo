@@ -1,0 +1,4 @@
+authenticate:
+    constraints:
+        username: "required"
+        password: "required"

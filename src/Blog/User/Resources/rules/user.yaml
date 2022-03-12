@@ -1,0 +1,10 @@
+manage_user:
+    constraints:
+        username: "required|string"
+        name: "required|string"
+        email: "required|email"
+        role: "required|in:admin,guest"
+
+manage_password:
+    constraints:
+        password: "required|string"

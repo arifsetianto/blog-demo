@@ -1,0 +1,13 @@
+get_user:
+    type: resource
+    path: users
+    only: [index, show]
+    middleware: ["auth:api", "roles.has:admin"]
+
+create_user:
+    type: message
+    message: create-user
+    path: users
+    methods: [post]
+    rules: [manage_user, manage_password]
+    middleware: ["auth:api", "roles.has:admin"]

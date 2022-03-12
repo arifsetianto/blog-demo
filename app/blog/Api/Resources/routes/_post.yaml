@@ -1,0 +1,8 @@
+post:
+    type: resource
+    path: posts
+    rules: [manage_post]
+    middleware: ["auth:api", "roles.has:guest"]
+    options:
+        withs:
+            - user

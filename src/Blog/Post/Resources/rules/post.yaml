@@ -1,0 +1,6 @@
+manage_post:
+    constraints:
+        user: "required|uuid|exists:users,id"
+        title: "required|string"
+        content: "required|string"
+        publish: "required|boolean"
