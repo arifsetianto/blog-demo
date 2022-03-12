@@ -23,4 +23,14 @@ class UserRepository extends Repository
 
         return $this->executeSingle($qb);
     }
+
+    public function findByActive()
+    {
+        $qb = $this->createQueryBuilder();
+
+        $qb->select('users.*');
+        //$qb->where('status', 'active');
+
+        return $this->execute($qb);
+    }
 }

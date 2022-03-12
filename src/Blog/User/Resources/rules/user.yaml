@@ -8,3 +8,7 @@ manage_user:
 manage_password:
     constraints:
         password: "required|string"
+
+name:
+    constraints:
+        name: "required"

@@ -16,13 +16,8 @@ use Blog\User\ValueObject\Password;
  */
 final class UserCreator
 {
-    private UserRepository $repository;
-    private RoleRepository $roleRepository;
-
-    public function __construct(UserRepository $repository, RoleRepository $roleRepository)
+    public function __construct(private UserRepository $repository, private RoleRepository $roleRepository)
     {
-        $this->repository = $repository;
-        $this->roleRepository = $roleRepository;
     }
 
     public function create(CreateUser $createUser): User

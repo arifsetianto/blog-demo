@@ -4,5 +4,10 @@ post:
     rules: [manage_post]
     middleware: ["auth:api", "roles.has:guest"]
     options:
+        paginate: true
         withs:
             - user
+        specs:
+            index:
+                - name: post-keyword
+                  arguments: [keyword]

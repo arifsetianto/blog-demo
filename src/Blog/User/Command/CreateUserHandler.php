@@ -12,11 +12,8 @@ use Blog\User\Service\UserCreator;
  */
 final class CreateUserHandler
 {
-    private UserCreator $creator;
-
-    public function __construct(UserCreator $creator)
+    public function __construct(private UserCreator $creator)
     {
-        $this->creator = $creator;
     }
 
     public function handle(CreateUser $createUser): User

@@ -15,7 +15,6 @@ use Pandawa\Module\Api\Http\Controller\InteractsWithRendererTrait;
  */
 final class PingPresenter implements PresenterInterface, NameablePresenterInterface
 {
-    use NameablePresenterTrait;
     use InteractsWithRendererTrait {
         InteractsWithRendererTrait::render as response;
     }
@@ -23,5 +22,10 @@ final class PingPresenter implements PresenterInterface, NameablePresenterInterf
     public function render(Request $request)
     {
         return $this->response($request, ['status' => 'pong']);
+    }
+
+    public static function name(): string
+    {
+        return 'ping-presenter';
     }
 }

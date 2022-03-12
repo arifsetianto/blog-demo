@@ -3,3 +3,9 @@ homepage:
     methods: [get]
     path: /
     presenter: landing
+
+about_page:
+    type: presenter
+    methods: [get]
+    path: about
+    presenter: about

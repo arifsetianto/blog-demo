@@ -2,7 +2,7 @@ ping:
     type: presenter
     methods: [get]
     path: ping
-    presenter: ping
+    presenter: ping-presenter
 
 auth:
     type: group

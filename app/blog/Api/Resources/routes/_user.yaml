@@ -1,7 +1,7 @@
 get_user:
     type: resource
     path: users
-    only: [index, show]
+    only: [index]
     middleware: ["auth:api", "roles.has:admin"]
 
 create_user:
@@ -11,3 +11,16 @@ create_user:
     methods: [post]
     rules: [manage_user, manage_password]
     middleware: ["auth:api", "roles.has:admin"]
+    options:
+        withs:
+            - roles
+
+find_active_users:
+    type: message
+    message: find-active-users
+    path: active-users
+    methods: [get]
+    options:
+        paginate: true
+        withs:
+            - roles
